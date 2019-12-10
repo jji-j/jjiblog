@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="/login.do" id="frm">
+<input type="text" name="id" id="id">아이디
+<input type="text" name="pass" id="pwd">비번
+<input type="button" id="regi">
+</form>
+
+<script>
+		$(document).ready(function(){
+            $("#regi").click(function(){
+					//(앞/뒤) 공백제거
+					
+				var userId = $.trim($("#id").val());
+				var pwd = $.trim($("#pwd").val());
+                console.log(userId);
+				//null값 검사
+				if(userId==""){
+                    alert("아이디를 입력하세요.");
+                        $("#id").focus();
+                    return false;//리턴하게되면 function에서 빠져나오기 때문에 return false로 해줌.
+				}else{
+                    if(!pattern.test(userId)){//test는 패턴에 맞으면 true, 맞지 않으면 false 값 리턴
+                        alert("아이디는영문소문자로 시작하고 \r\n 영소문자, 숫자, 언더바(_)만 사용할 수 있다.");
+                        $("#id").val("").focus();
+                        return false;
+                    }
+                }
+                $("#frm").submit();
+            });
+            //입력 패턴 검사(형식 및 길이 제한)
+            var pattern = /^[a-z0-9_-]{3,16}$/;
+            var num = /^[0-9]+$/;
+		});
+	</script>
+</body>
+</html>
