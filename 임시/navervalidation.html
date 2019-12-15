@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="UI.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="evalution.js"></script>
+</head>
+<body>
+    <div id="full"> 
+        <table>
+            <tr style="text-align:center;">
+                <td id="top1">기본정보</td>
+                <td id="top2">추가정보</td>
+                <td id="top3">전문분야</td>
+            </tr>
+        </tble>
+    </div>
+
+    <div>
+        <form method="get" action="/abc" id="form">
+            <table border="1" class="table">
+                <tr>
+                    <td>1.기본정보</td>
+                    <td colspan="2" style="text-align:right">(*)는 필수 입력사항입니다.</td>
+                </tr>
+                <tr>
+                    <th colspan="3" style="text-align:left">*기본정보를 모두 입력해야 추가정보와 전문분야를 입력할 수 있습니다.</th>
+                </tr>
+            </table>
+
+            <table border="1" style="text-align:center">
+                <tr>
+                    <td>성명</td>
+                    <td><input type="text" name ="userName" id="userName"></td>
+                    <td id="nameTd" style="display:none;"></td>
+                </tr>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" id="userID"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="text" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호확인</td>
+                    <td><input type="text" id="pwdConfirm"></td>
+                </tr>
+                <tr>
+                    <td>*생년월일</td>
+                    <td><input type="text" name="BRTHDY" id="brthdy"></td>
+                </tr>
+                <tr>
+                    <td style="background-color:blue">*성별</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" id="gender">남
+                        <input type="radio" name="gender" value="female" id="gender">여
+                    </td>
+                </tr>
+                <tr>
+                    <td>*내/외국인 구분</td>
+                    <td>
+                        <input type="radio" name="NATIVE">내국인
+                        <input type="radio" name="FOREIGNER">외국인
+                    </td>
+                </tr>
+                <tr>
+                    <td>*휴대전화</td>
+                    <td><input type="text" name="MOBLPHON" id="moblphon"></td>
+                </tr> 
+                <tr>
+                    <td>*이메일</td>
+                    <td>
+                        <input type="email" name="EMAIL" id="email">
+                        <select name="EMAIL1" id="email1">
+                            <option value ="" selected="selected">직접입력</option>
+                            <option value ="naver.com" >naver.com</option>
+                            <option value ="hanmail.net">hanmail.net</option>
+                            <option value ="nate.com">nate.com</option>
+                            <option value ="yahoo.com">yahoo.com</option>  
+                        </select>   
+                    </td>
+                    <td>
+                        <input type="email" name="EMAIL2" id="email2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>*소속</td>
+                    <td>
+                        <select name="POSITION" id="position">
+                            <option value ="2" selected="selected">현직</option>
+                            <option value ="b" >naver.com</option>
+                            <option value ="c">hanmail.net</option>
+                            <option value ="d">nate.com</option>
+                            <option value ="e">yahoo.com</option>  
+                        </select> 
+                        <input type="button" value="소속검색">
+                    </td>
+                    <td>
+                        <input type="text" size="3" name="POSITION1" id="position1">
+                        <input type="checkbox" id="positionSelected" value="uncheck">직접입력
+                    </td>
+                </tr>
+                <tr>
+                    <td>*직위</td>
+                    <td><input type="text" name="OFPOSITION"></td>
+                </tr>
+                <tr>
+                    <td>*부서명</td>
+                    <td><input type="text" name="DEPARTMENT"></td>
+                </tr>
+                <tr>
+                    <td>*소속기관유형</td>
+                    <td>
+                        <select name="PSTYPE">
+                            <option value ="a" selected="selected">공공기관(비영리)</option>
+                            <option value ="b" >naver.com</option>
+                            <option value ="c">hanmail.net</option>
+                            <option value ="d">nate.com</option>
+                            <option value ="e">yahoo.com</option>  
+                        </select> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>*직장주소</td>
+                    <td>
+                        <input type="text" size="4" name="COADDRESS">
+                        <input type="button" value="우편번호검색" name="COADDRESS1">
+                    </td>
+                    <td>
+                        <input type="text">
+                        <input type="text">
+                    </td>
+                    </tr>
+                <tr>
+                    <td>*(은행)계좌번호</td>
+                    <td><input type="text" name="ACNUTNO"></td>
+                </tr>
+                <tr>
+                    <td>*과학기술인</td>
+                    <td><input type="text" name="TSLY"</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="button" value="다음으로" id="next">
+                        <input type="button" value="저장취소">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
