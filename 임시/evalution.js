@@ -121,7 +121,7 @@ $(document).ready(function(){
                 alert("성별을 선택하세요");
                 return false;
         }
-        if()
+      
         return true;
     }
 
