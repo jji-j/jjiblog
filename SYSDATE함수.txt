@@ -1,0 +1,19 @@
+SYSDATE
+
+현재 날짜와 시간을 구해오는 함수
+
+**MYSQL ->
+
+@SELECT SYSDATE();->현재날짜와시간
+
+@TO_CHAR 함수는 MYSQL에서 DATE_FORMAT으로 이용
+
+SELECT DATE_FORMAT(NOW(),'%H.%i.%s')->16.49.02(현재 시간)
+
+
+
+
+**ORACLE->
+
+@SELECT SYSDATE-1 FROM DUAL;(1일전의 날짜/시간을 반환)/+1하면 1일 후
+@SELECT TO_CHAR(SYSDATE, 'HH24:MI:SS') FROM DUAL; (시간만 반환 (24시간포멧), e
