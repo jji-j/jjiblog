@@ -1,0 +1,5 @@
+NULL IF
+
+-NULL IF(exp1,exp2)
+-exp1값과 exp2값이 동일하면 NULL을 그렇지 않으면 exp1을 반환
+-CASE WHEN expr1 = expr2 THEN NULL ELSE expr1 END
