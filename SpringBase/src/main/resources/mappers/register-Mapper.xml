@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myp.mapper.RegiMapper">
+	
+	<insert id = "regi">
+		insert into regi values (#{id},#{pass},#{repass})
+	</insert>
+	
+	<select id = "login" parameterType="com.myp.domain.RegiVO" resultType = "com.myp.domain.RegiVO">
+		select 
+			id,pass
+		from
+			regi
+		where id = #{id}
+	</select>
+</mapper>
