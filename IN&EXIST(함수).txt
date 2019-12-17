@@ -1,0 +1,28 @@
+IN & EXIST
+
+EXIST는 IN과 유사한 개념이나 적용되는 범위가 다름.
+IN의 괄호()사이에는 특정값이나, 서브쿼리가 올 수 있는 반면에, EXISTS의 괄호()사이에는 서브쿼리만 올 수 있다
+그리고IN은 ()안에 있는 특정값이나 서브쿼리의 결과값이 포함이 되는지만 체크를 하지만 
+EXIST는 ()안의 서브쿼리로부터 해당 컬럼의 값이 존재 유무만 체크한다.
+EX)우선 IN을 통해서 부서아이디가 100또는 110인 부서를 조회한다. IN을 이용한 방법 2가지와 EXIST문을 작성.
+반환 결과는 셋 다 같은 결과를 반환.
+
+1.IN에 특정값을 명시
+
+SELECT department_id, employee_id, first_name,salary
+FROM hr.employees
+WHERE department_id IN (100,110);
+
+2.IN에 서브쿼리를 넣어줌 (이런 방식으로 할수도 있다는 예제)
+
+SELECT department_id, employee_id,first_name,salary
+FROM hr.employees
+WHERE department_id IN 
+		        (SELECT department_id
+		         FROM departments
+		         WHERE department_id IN((100,110));
+
+3.서브쿼리를 이용한 EXISTS 예제
+SELECT department_id, employee_id, first_name,salary
+FROM hr.employees emp
+WHERE EXISTS		
