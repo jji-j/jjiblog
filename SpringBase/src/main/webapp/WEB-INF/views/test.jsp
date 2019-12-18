@@ -1,67 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ page session="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html> 
 <html>
 <head>
-<title>°Ô½ÃÆÇ ¸ñ·Ï</title>
+<title></title>
 </head>
-<form action = "regist" method = "get">
 <body>
-<table border="1" width="880">
-        <tr>
-        <td width="77">
-            <p align="center">±Û¹øÈ£</p>
-        </td>
-        
-        <td width="327">
-            <p align="center">Á¦¸ñ</p>
-        </td>
-
-        <td width="197">
-            <p align="center">ÀÛ¼ºÀÚ</p>
-        </td>
-
-        <td width="155">
-            <p align="center">ÀÛ¼ºÀÏ</p>
-        </td>
-
-        <td width="90">
-            <p align="center">Á¶È¸¼ö</p>
-        </td>
-
-        </tr>
-
-        <c:forEach items="${list}" var="boardVO">
-
-	<tr>
-
-        <td>${boardVO.bno}</td>
-
-        <td><a href='/read?bno=${boardVO.bno}'>${boardVO.title}</a></td>
-
-        <td>${boardVO.writer}</td>
-
-        <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
-
-				value="${boardVO.regdate}" /></td>
-
-        <td><span class="badge bg-red">${boardVO.viewcnt}</span></td>
-
-	</tr>
-
-		</c:forEach>
-
-    </table>
-
-     <button type ="submit">±Û¾²±â</button>
-
-   </body>
-
-    </form>
-
+	í˜¸í˜¸
+</body>
 </html>
 
