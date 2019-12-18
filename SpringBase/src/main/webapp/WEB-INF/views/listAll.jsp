@@ -41,7 +41,7 @@
 
         <td>${boardVO.bno}</td>
 
-        <td><a href='controller/read?bno=${boardVO.bno}'>${boardVO.title}</a></td>
+        <td><a href='/controller/read?bno=${boardVO.bno}'>${boardVO.title}</a></td>
 
         <td>${boardVO.writer}</td>
 

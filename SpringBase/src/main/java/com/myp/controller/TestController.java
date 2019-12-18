@@ -18,13 +18,13 @@ public class TestController {
 	private TestService service;
 	
 	@RequestMapping("/test")
-	public ModelAndView test(@RequestParam int bno) throws Exception{
+	public String test() throws Exception{
 		
-		ModelAndView mv = new ModelAndView("/controller/Test");
-		BoardVO vo = service.read(bno);
-		mv.addObject("list", vo);
+//		ModelAndView mv = new ModelAndView("/controller/Test");
+//		BoardVO vo = service.read(bno);
+//		mv.addObject("list", vo);
 				
-		return mv;
+		return "test";
 	}
 	
 
