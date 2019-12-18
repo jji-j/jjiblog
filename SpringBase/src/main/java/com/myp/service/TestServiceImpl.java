@@ -3,10 +3,12 @@ package com.myp.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.myp.domain.BoardVO;
 import com.myp.persistence.BoardDAO;
 
+@Service
 public class TestServiceImpl implements TestService {
 	
 	@Autowired

@@ -24,7 +24,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 
-	public BoardVO read(Integer bno) throws Exception {
+	public BoardVO read(int bno) throws Exception {
 
 		return dao.read(bno);
 
@@ -44,7 +44,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 
-	public void remove(Integer bno) throws Exception {
+	public void remove(int bno) throws Exception {
 
 		dao.delete(bno);
 

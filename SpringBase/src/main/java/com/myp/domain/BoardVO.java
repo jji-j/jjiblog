@@ -4,21 +4,25 @@ import java.util.Date;
 
 public class BoardVO {
 	
-	private Integer bno;
+	private int bno;
 	private String title;
 	private String content;
 	private String writer;
 	private Date regdate;
 	private int viewcnt;
-	public Integer getBno() {
-		return bno;
-	}
+	
+	
 	@Override
 	public String toString() {
 		return "BoardVo [bno=" + bno + ", title=" + title + ", content=" + content + ", writer=" + writer + ", regdate="
 				+ regdate + ", viewcnt=" + viewcnt + "]";
 	}
-	public void setBno(Integer bno) {
+	
+	public int getBno() {
+		return bno;
+	}
+	
+	public void setBno(int bno) {
 		this.bno = bno;
 	}
 	public String getTitle() {

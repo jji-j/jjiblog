@@ -25,7 +25,7 @@ public class BoardDAOImpl  implements BoardDAO {
 	}
 
 	@Override
-	public BoardVO read(Integer bno) throws Exception {
+	public BoardVO read(int bno) throws Exception {
 
 		return session.selectOne(namespace + ".read", bno);
 
@@ -41,7 +41,7 @@ public class BoardDAOImpl  implements BoardDAO {
 
 
 	@Override
-	public void delete(Integer bno) throws Exception {
+	public void delete(int bno) throws Exception {
 
 		session.delete(namespace+".delete", bno);
 
