@@ -18,7 +18,7 @@ public class TestDAOImpl implements TestDAO {
 
 	@Override
 	public TestVO selectTest() throws Exception {
-		return session.selectOne(namespace + ".TestId");
+		return session.selectOne(namespace + ".selectTest");
 	}
 
 
