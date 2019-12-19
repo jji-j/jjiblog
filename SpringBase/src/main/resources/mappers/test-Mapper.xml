@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.myp.mapper.RegiMapper">
+	
+	
+	<select id = "selectTest" resultType = "com.myp.domain.TestVO">
+		select EMPNO 
+		FROM EMP
+		WHERE ENAME = "JONES"
+	</select>
+	
+</mapper>
