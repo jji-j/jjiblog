@@ -6,7 +6,7 @@
 <title></title>
 </head>
 <body>
-	호호
+	${TestVO.title}
 </body>
 </html>
 
