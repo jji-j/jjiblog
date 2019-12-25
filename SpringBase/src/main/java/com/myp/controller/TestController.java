@@ -1,5 +1,7 @@
 package com.myp.controller;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
@@ -27,11 +29,12 @@ public class TestController {
 	public ModelAndView test() throws Exception{
 			
 		ModelAndView mv = new ModelAndView("/test");
-		TestVO vo = service.TestId();
+		List<TestVO> vo = service.TestId();
+		System.out.println(vo.get(0).getTitle());
 		mv.addObject("TestVO", vo);
+		
 		return mv;
 	}
 
 
 }
-

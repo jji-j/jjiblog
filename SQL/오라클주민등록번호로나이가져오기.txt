@@ -1,0 +1,16 @@
+SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, TO_DATE(RES,'YYYYMMDD'))/12)
+	AS AGE
+FROM(SELECT (CASE
+		WHEN SUBSTR('8502172111111',7,1)IN('1','2')
+		THEN
+		'19'|| SUBSTR('8502172111111',1,6)
+		WHEN SUBSTR('8502172111111',7,1)IN('3','4')
+		THEN
+		'20'||SUBSTR('8502172111111',1,6)
+		END)
+		AS RES
+		FROM DUAL
+	
+1,2면 1900년대 3,4면 2000년대 주민번호 앞자리에 850217에 19를 붙이면 19850217에 19를 붙이면 19850217이됨
+이게 RES RES를 현재시간기준으로 바꿔서 나누기해서 현재나이를 구한다.		
+지정한 두 날짜 사이의 개월수를 반환하는 함수 구문은 MONTHS_BETWEEN(date1,date2)이며 반환 타입은 number

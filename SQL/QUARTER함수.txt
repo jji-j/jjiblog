@@ -1,0 +1,13 @@
+[mysql] 년 4분기의 값을 반환하는 QUARTER 함수
+
+분기는 3, 6, 9, 12 월의 기준, 4분기로 하여, 해당 달의 값을 대입하여 해당 분기를 반환합니다.
+
+ SELECT QUARTER(date);
+
+예제(ex #1
+ mysql> SELECT QUARTER('2011-09-01');
+      -> 3
+
+예제(ex #2
+ mysql> SELECT QUARTER('2011-10-05');
+      -> 3

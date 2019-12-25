@@ -1,5 +1,7 @@
 package com.myp.service;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
@@ -14,7 +16,7 @@ public class TestServiceImpl implements TestService {
 	private TestDAO dao;
 	
 	@Override
-	public TestVO TestId() throws Exception {
+	public List<TestVO> TestId() throws Exception {
 		
 		return dao.selectTest();
 	}

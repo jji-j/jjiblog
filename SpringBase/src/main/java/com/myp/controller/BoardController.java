@@ -28,7 +28,7 @@ public class BoardController {
 
 	}
 	
-	@RequestMapping(value = "/regist", method= RequestMethod.GET)
+	@RequestMapping(value = "/regist", method= RequestMethod.GET)//이게 왜 두개여야할까? 이걸지우고  http://localhost:8080/SpringBase/regist하면왜안나올까
 		public void registerGET(BoardVO board, Model model) throws Exception{
 		
 	}

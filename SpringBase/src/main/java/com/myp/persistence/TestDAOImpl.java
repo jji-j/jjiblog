@@ -1,5 +1,7 @@
 package com.myp.persistence;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -17,10 +19,10 @@ public class TestDAOImpl implements TestDAO {
 
 
 	@Override
-	public TestVO selectTest() throws Exception {
-		return session.selectOne(namespace + ".selectTest");
+	public List<TestVO> selectTest() throws Exception {
+		return session.selectList(namespace + ".selectTest");
 	}
 
 
-
 }
+

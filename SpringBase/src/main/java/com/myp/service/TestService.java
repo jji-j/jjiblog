@@ -1,10 +1,11 @@
-
 package com.myp.service;
+
+import java.util.List;
 
 import com.myp.domain.TestVO;
 
 public interface TestService {
 	
-	public TestVO TestId() throws Exception;
+	public List<TestVO> TestId() throws Exception;
 	
 }

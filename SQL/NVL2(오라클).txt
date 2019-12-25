@@ -1,0 +1,24 @@
+NVL2
+
+
+-NVL2라는 함수는 NVL함수의 DECODE 함수의 개념을 합쳤다고 생각하면 쉽다
+-NVL2(expr,expr1,expr2)
+-expr의 값이 null이 아닐 경우에는 expr1의 값을 반환하고 , null일 경우에는 expr2의 값을 반환한다
+
+ex)--매니저가 있는 경우 1을 없는 경우 0을 출력하는 예제
+
+SELECT empno, NVL2(mgr,1,0)mgr
+FROM emp
+WHERE deptno = 10;
+
+
+EMPNO         MGR
+--------	     ------
+7782	         1
+7839                 0
+7934                 1
+
+SDS
+
+
+

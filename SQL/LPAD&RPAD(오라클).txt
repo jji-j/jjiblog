@@ -1,0 +1,24 @@
+1.LAPD(char1, n,[char2]), RPAD(char1,n,[char2])
+LPAD:왼쪽에 문자열을 끼어 놓는 역할을 한다.
+RPAD:오른쪽에 문자열을 끼어 놓는 역할을 한다.
+
+n은 반환되는 문자열의 전체 길이를 나타내며, char1의 문자열이 n보다 클 경우 char1을 n개 무자열 만큼 반환한다.
+
+
+예제--------------------------
+
+SELECT LPAD('oracleclub',12,'*')name from dual
+UNION ALL
+SELECT RPAD('oracleclub',12,'*')name from dual
+
+결과 -> **oracleclub
+	orcleclub**
+
+예제--------------------------
+왼쪽 채우기
+
+SELECT LPAD(12345,10,'0')AS TEST_SEQ FROM DUAL;
+결과
+TEST_SEQ
+1234500000
+
