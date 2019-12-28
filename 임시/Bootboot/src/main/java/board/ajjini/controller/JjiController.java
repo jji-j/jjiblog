@@ -19,10 +19,9 @@ public class JjiController {
 	@ResponseBody
 	public Map<String, Object> ajaxAjax() throws Exception{
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("name", "jjini");
 		
+		map.put("oo", "jjini");
 		
-
 		return map;
 	}
 	
