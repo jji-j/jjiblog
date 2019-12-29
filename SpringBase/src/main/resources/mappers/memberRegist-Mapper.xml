@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myp.mapper.memberRegistMapper">
+
+	<insert id = "create" parameterType="HashMap">
+		<![CDATA[
+			insert into chan0124 values(#{id},#{pass},#{repass})
+		]]>
+	</insert>
+	
+	
+	<select id = "loginCheck" parameterType="HashMap" resultType="HashMap">
+		<![CDATA[
+			select pass 
+			from chan0124
+			where id = #{id}
+		]]>	
+	</select>
+	
+	<insert id = "boardInsert" parameterType="com.myp.vo.BoardVO">
+		<![CDATA[
+				insert into EMP(EMPNO,ENAME,JOB,MGR,SAL)
+				 values(#{empno},#{ename},#{job},#{mgr},#{sal})
+			]]>
+	</insert>
+	
+	<select id = "selectBoard" parameterType="com.myp.vo.BoardVO" resultType="HashMap">
+		<![CDATA[
+			select EMPNO,ENAME,JOB,MGR,SIGNAL,SAL
+			from EMP
+			where ENAME = #{id}
+		]]>	
+	</select>
+</mapper>

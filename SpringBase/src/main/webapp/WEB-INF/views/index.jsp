@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-${list.id}<br>
-${list.pass}
+	¿ìÂîÁö ¾Ê´Ï?
 </body>
 </html>

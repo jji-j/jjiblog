@@ -1,64 +1,33 @@
 package com.myp.service;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
-import com.myp.domain.BoardVO;
-import com.myp.persistence.BoardDAO;
+import com.myp.dao.BoardDAO;
+import com.myp.vo.BoardVO;
 
 @Service
 public class BoardServiceImpl implements BoardService {
-
+	
 	 @Inject
 	  private BoardDAO dao;
 
 	@Override
-	public void regist(BoardVO board) throws Exception {
-		dao.create(board);
+	public void boardInsert(BoardVO vo) throws Exception {
+		
+		dao.boardInsert(vo);
 	}
-
-
 
 	@Override
-
-	public BoardVO read(int bno) throws Exception {
-
-		return dao.read(bno);
-
+	public List<Map<String, Object>> selectBoard(BoardVO vo) throws Exception {
+		
+		List<Map<String, Object>> vo1 = dao.selectBoard(vo);
+	
+		return vo1;
 	}
 
-
-
-	@Override
-
-	public void modify(BoardVO board) throws Exception {
-
-		dao.update(board);
-
-	}
-
-
-
-	@Override
-
-	public void remove(int bno) throws Exception {
-
-		dao.delete(bno);
-
-	}
-
-
-
-	@Override
-
-	public List<BoardVO> listAll() throws Exception {
-
-		return dao.listAll();
-
-	}
 }
-
-

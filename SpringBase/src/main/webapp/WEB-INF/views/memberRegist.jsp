@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="get" action="/register.do" id="frm">
+	<form method="get" action="/memberRegist.do" id="frm">
 		<table border="1">
 			<tr>
 				<td>아이디</td>
@@ -26,7 +26,7 @@
 			</tr>
 			
 			<tr>
-				<td><input type="button" value="취소"></td>
+				<td><a href="/"><input type="button" value="취소"></a></td>
 				<td><input type="button" value="확인" id="regi"></td>
 			</tr>
 		</table>
